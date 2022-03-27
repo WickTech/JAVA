@@ -1,0 +1,10 @@
+public class Solution {
+    public int solve(int A, int B, int C, int D, int E, int F, int G, int H) {
+        int xs = Math.max(A, E), xe = Math.min(C, G);
+        int ys = Math.max(B, F), ye = Math.min(D, H);
+        if (xs < xe && ys < ye)
+            return 1;
+        else
+            return 0;
+    }
+}
