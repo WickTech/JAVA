@@ -1,0 +1,14 @@
+public class Solution {
+    public ArrayList<Character> to_lower(ArrayList<Character> A) {
+
+        int n = A.size();
+
+        for(int i=0;i<n;++i){
+
+            char[] ans = A.get(i).toLowerCase(Locale.ROOT);
+
+            A.set(i, ans);
+        }
+        return ans;
+    }
+}
