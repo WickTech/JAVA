@@ -1,0 +1,29 @@
+public class Solution {
+    public int trap(int[] A) {
+        
+        int n = A.length;
+        int ans = 0;
+        int Left=0,Right=n-1,Lmax=0,Rmax=0;
+
+        while(Left <= Right){
+
+            if(A[Left] <= A[Right]){
+
+                if( A[Left] >= Lmax)                    
+                    Lmax = A[Left];
+
+                else
+                    ans += Lmax-A[Left];
+                    Left++;                
+            }
+            else{    
+                if(A[Right] >= Rmax)
+                    Rmax = A[Right];
+                else
+                    ans += Rmax - A[Right];
+                    Right--;
+            } 
+        }
+        return ans;   
+    }
+}
