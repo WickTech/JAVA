@@ -1,0 +1,21 @@
+public class Solution {
+    public int pow(int A, int B, int C) {
+
+        A = A%C;
+
+        if(B==1){return A>=0?A:A+C;}
+
+        if(B==0){return A==0?A:1;}
+
+        long D = ((long)A*(long)A)%C;
+
+        if(B%2==0){
+
+            return pow((int)D,B/2,C);
+        }
+        else{
+
+            return (int)(((long)A*(long)pow((int)D,B/2,C))%C);
+        }
+    }
+}
